@@ -1,0 +1,23 @@
+name: C/C++ CI
+
+on:
+  push:
+    branches: 
+    - 8-code-review-of-mikolovs-code-for-word2vec
+  pull_request:
+    branches: 
+    - main
+
+jobs:
+  build:
+
+    runs-on: [self-hosted, word2vec]
+
+    steps:
+    - uses: actions/checkout@v3
+    - name: make
+      run: make
+    - name: make check
+      run: make check
+    - name: make distcheck
+      run: make distcheck
