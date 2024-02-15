@@ -1,3 +1,40 @@
+# Word2Vec 
+<!-- TODO: better name -->
+
+This repository contains the [Tomas Mikolov's](https://scholar.google.com/citations?user=oBu8kMMAAAAJ&hl=en) source code for the `word2vec` tool for computing continuous distributed representations of words.
+
+Initially, the repository was hosted 
+at svn google's server, the first commit of this repo is a mirror of
+that repo [Google 2013](https://code.google.com/archive/p/word2vec/).
+
+
+## Prerequisites
+
+Before building the repository, ensure you have the following prerequisites installed on your system:
+
+- C compiler (e.g., gcc)
+- Make build system
+- Python (if you plan to use the provided Python scripts)
+
+## Building the word2vec model (Windows 10 + MinGW64)
+
+To build the repository, follow these steps:
+
+1. Clone the repository to your local machine:
+```sh
+   $ git clone https://github.com/AlexisTercero55/word2vec_TMB/tree/main
+```
+2. Navigate to the repository directory and run make tool
+```sh
+   $ cd  .\word2vec_TMB
+   $ make
+```
+
+
+
+
+
+# 1st Readme
 Tools for computing distributed representtion of words
 ------------------------------------------------------
 
