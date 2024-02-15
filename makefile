@@ -5,7 +5,7 @@ CFLAGS = -lm -pthread -O3 -march=native -Wall -funroll-loops -Wno-unused-result
 all: word2vec word2phrase distance word-analogy compute-accuracy
 
 word2vec : word2vec.c
-	$(CC) word2vec.c -o word2vec $(CFLAGS)
+	$(CC) word2vec.c posix_memalign.c -o word2vec $(CFLAGS)
 word2phrase : word2phrase.c
 	$(CC) word2phrase.c -o word2phrase $(CFLAGS)
 distance : distance.c

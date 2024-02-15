@@ -1,0 +1,36 @@
+# ************************************
+# * Alexis Tercero
+# * 2024-02-15
+# * alexistercero55@gmail.com
+# * Build and train word2vec pipeline
+# ************************************
+name: C/C++ manual CI
+
+on:
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Custom params"
+        default: "uwu"
+
+jobs:
+  build:
+    runs-on: [self-hosted, word2vec]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: "Show custom params"
+      run: echo "Custom param value ${{ github.event.inputs.name }}"
+    - name: make
+      run: make
+  
+  train_demo:
+    needs: build
+
+    runs-on: [self-hosted, word2vec]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: word-demo
+        shell: bash
+        run: ./demo-word.sh

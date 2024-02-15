@@ -1,0 +1,35 @@
+# ************************************
+# * Alexis Tercero
+# * 2024-02-15
+# * alexistercero55@gmail.com
+# * Build and train word2vec pipeline
+# ************************************
+name: C/C++ CI
+
+on:
+  push:
+    branches: 
+      - 8-code-review-of-mikolovs-code-for-word2vec
+  pull_request:
+    branches: 
+      - main
+
+jobs:
+  build:
+    runs-on: [self-hosted, word2vec]
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: make
+      run: make
+  
+  train_demo:
+    needs: build
+
+    runs-on: [self-hosted, word2vec]
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: word-demo
+        shell: bash
+        run: ./demo-word.sh

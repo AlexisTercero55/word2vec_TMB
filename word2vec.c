@@ -17,6 +17,7 @@
 #include <string.h>
 #include <math.h>
 #include <pthread.h>
+#include "posix_memalign.h"// Work around for issue #1
 
 #define MAX_STRING 100
 #define EXP_TABLE_SIZE 1000
