@@ -1,6 +1,8 @@
 # Word2Vec 
 <!-- TODO: better name -->
 
+[![C/C++ CI](https://github.com/AlexisTercero55/word2vec_TMB/actions/workflows/c-cpp.yml/badge.svg)](https://github.com/AlexisTercero55/word2vec_TMB/actions/workflows/c-cpp.yml)
+
 This repository contains the [Tomas Mikolov's](https://scholar.google.com/citations?user=oBu8kMMAAAAJ&hl=en) source code for the `word2vec` tool for computing continuous distributed representations of words.
 
 Initially, the repository was hosted 
