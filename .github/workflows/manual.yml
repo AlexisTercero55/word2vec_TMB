@@ -4,15 +4,14 @@
 # * alexistercero55@gmail.com
 # * Build and train word2vec pipeline
 # ************************************
-name: C/C++ CI
+name: C/C++ manual CI
 
 on:
-  push:
-    branches: 
-      - 8-code-review-of-mikolovs-code-for-word2vec
-  pull_request:
-    branches: 
-      - main
+  workflow_dispatch:
+    inputs:
+      name:
+        description: "Custom params"
+        default: "uwu"
 
 jobs:
   build:
@@ -20,6 +19,8 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+    - name: "Show custom params"
+      run: echo "Custom param value ${{ github.event.inputs.name }}"
     - name: make
       run: make
   
