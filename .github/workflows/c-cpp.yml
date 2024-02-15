@@ -7,13 +7,13 @@
 name: C/C++ CI
 
 on:
+  workflow_dispatch:
   push:
     branches: 
       - 8-code-review-of-mikolovs-code-for-word2vec
   pull_request:
     branches: 
       - main
-  workflow_dispatch:
 
 jobs:
   build:
